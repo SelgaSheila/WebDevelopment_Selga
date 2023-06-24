@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alphabetical Order</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+    <script>
+        function sortAlphabetically() {
+            var str = document.getElementById('string').value;
+            var sortedStr = str.split('').sort().join('');
+
+            document.getElementById('result').innerHTML = 'Sorted String: ' + sortedStr;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Alphabetical Order</h1>
+        <div class="form-group">
+            <label for="string">Enter a string:</label>
+            <input type="text" class="form-control" id="string">
+        </div>
+        <button class="btn btn-primary" onclick="sortAlphabetically()">Sort</button>
+        <p id="result"></p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
